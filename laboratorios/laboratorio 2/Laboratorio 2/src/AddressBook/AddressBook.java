@@ -1,9 +1,14 @@
 package AddressBook;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.HashMap;
 import contactos.Contact;
 
-public class AddressBook {
+public class AddressBook implements Serializable {
     private HashMap<String, Contact> contacts;
 
     public AddressBook() {
@@ -33,7 +38,7 @@ public class AddressBook {
         if (contacts.containsKey(email)) {
             System.out.println(contacts.get(email));
         } else {
-            System.out.println("Contact not found.");
+            System.out.println("Contact not found."); 
         }
     }
 
@@ -44,5 +49,11 @@ public class AddressBook {
         } else {
             System.out.println("No contact found with the provided email.");
         }
+    }
+    public void StoreContacts() throws IOException{
+        FileOutputStream fileOutputStream = new FileOutputStream();
+        ObjectOutputStream objectInputStream = new ObjectOutputStream(fileOutputStream);
+        objectInputStream.writeObject(contacts);
+
     }
 }

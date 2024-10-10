@@ -4,6 +4,7 @@ public class Persons {
     private String Name;
     private Integer Level;
     private Integer LifePoints;
+    
     public Persons (String Name, Integer Level , Integer LifePoints){
         this.Name = Name;
         this.Level = Level;
@@ -28,7 +29,7 @@ public class Persons {
         this.LifePoints = LifePoints;
     }
     public void printStatus(){
-        System.out.println(this.Name + "tienes " + this.LifePoints + " de vida");
+        System.out.println(this.Name + " tienes " + this.LifePoints + " de vida");
         System.out.println("estas en el nivel " + this.Level);
     }
     public void takeDamage(Integer takeDamage){

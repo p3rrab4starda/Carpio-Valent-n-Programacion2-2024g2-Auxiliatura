@@ -12,7 +12,7 @@ public class Warrior extends Persons{
     public void setForce(Integer force) {
         Force = force;
     }
-    public void atack(){
-        System.out.println("el guerrero esta atacando");
+    public void castSpell(){
+        System.out.println("THIS IS SPARTAAAAAAAAAAAAAAAAAAAAAAAAA");
     }
 }

@@ -1,4 +1,5 @@
 package Personajes;
+import java.util.Random;
 
 public class Persons {
     private String Name;
@@ -42,5 +43,17 @@ public class Persons {
         else{
             this.LifePoints = LifePoints + 20;
         }
+    }
+    public boolean Alive(){
+        if (getLivePoints() > 1) {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public Integer atack(){
+        Random Damage = new Random();
+        return Damage.nextInt(10) + 10;
     }
 }

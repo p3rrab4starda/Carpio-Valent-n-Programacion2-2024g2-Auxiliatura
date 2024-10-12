@@ -84,6 +84,7 @@ public class App {
                 switch (Opcions) {
                     case 1:
                         if(numberrandom.nextInt(2) + 1 == 1){
+                            System.out.println("Empiezas primero ");
                             while (jugador1.Alive() != false | vampiro1.Alive() != false) {
                                 jugador1.takeDamage(vampiro1.atack());
                                 if (jugador1.Alive() == false) {
@@ -102,6 +103,7 @@ public class App {
                             }
                         }
                         else{
+                            System.out.println("Dracula empieza primero ");
                             while (jugador1.Alive() != false | vampiro1.Alive() != false) {
                                 vampiro1.takeDamage(jugador1.atack());
                                 if(vampiro1.Alive() == false){
@@ -121,82 +123,82 @@ public class App {
                         }
                     break;
                     case 2:
-                    if(numberrandom.nextInt(2) + 1 == 1){
-                        while (jugador1.Alive() != false | zombie1.Alive() != false) {
-                            jugador1.takeDamage(zombie1.atack());
-                            if (jugador1.Alive() == false) {
-                                break;
+                        if(numberrandom.nextInt(2) + 1 == 1){
+                            while (jugador1.Alive() != false | zombie1.Alive() != false) {
+                                jugador1.takeDamage(zombie1.atack());
+                                if (jugador1.Alive() == false) {
+                                    break;
+                                }
+                                zombie1.takeDamage(jugador1.atack());
+                                if(zombie1.Alive() == false){
+                                    break;
+                                }
                             }
-                            zombie1.takeDamage(jugador1.atack());
-                            if(zombie1.Alive() == false){
-                                break;
+                            if (jugador1.Alive() == false){
+                                System.out.println("frankenstein gano aahhhh");
                             }
-                        }
-                        if (jugador1.Alive() == false){
-                            System.out.println("frankenstein gano aahhhh");
+                            else{
+                                System.out.println("venciste a frankensten");
+                            }
                         }
                         else{
-                            System.out.println("venciste a frankensten");
-                        }
-                    }
-                    else{
-                        while (jugador1.Alive() != false | zombie1.Alive() != false) {
-                            zombie1.takeDamage(jugador1.atack());
-                            if(zombie1.Alive() == false){
-                                break;
+                            while (jugador1.Alive() != false | zombie1.Alive() != false) {
+                                zombie1.takeDamage(jugador1.atack());
+                                if(zombie1.Alive() == false){
+                                    break;
+                                }
+                                jugador1.takeDamage(zombie1.atack());
+                                if (jugador1.Alive() == false) {
+                                    break;
+                                }
                             }
-                            jugador1.takeDamage(zombie1.atack());
-                            if (jugador1.Alive() == false) {
-                                break;
+                            if (jugador1.Alive() == false){
+                                System.out.println("frankenstein gano aahhhh");
+                            }
+                            else{
+                                System.out.println("venciste a frankensten");
                             }
                         }
-                        if (jugador1.Alive() == false){
-                            System.out.println("frankenstein gano aahhhh");
-                        }
-                        else{
-                            System.out.println("venciste a frankensten");
-                        }
-                    }
                     break;
                     case 3:
-                    if(numberrandom.nextInt(2) + 1 == 1){
-                        while (jugador1.Alive() != false | DaddyYankee.Alive() != false) {
-                            jugador1.takeDamage(DaddyYankee.atack());
-                            if (jugador1.Alive() == false) {
-                                break;
+                        if(numberrandom.nextInt(2) + 1 == 1){
+                            while (jugador1.Alive() != false | DaddyYankee.Alive() != false) {
+                                jugador1.takeDamage(DaddyYankee.atack());
+                                if (jugador1.Alive() == false) {
+                                    break;
+                                }
+                                DaddyYankee.takeDamage(jugador1.atack());
+                                if(vampiro1.Alive() == false){
+                                    break;
+                                }
                             }
-                            DaddyYankee.takeDamage(jugador1.atack());
-                            if(vampiro1.Alive() == false){
-                                break;
+                            if (jugador1.Alive() == false){
+                                System.out.println("el jefe te gano");
                             }
-                        }
-                        if (jugador1.Alive() == false){
-                            System.out.println("el jefe te gano");
+                            else{
+                                System.out.println("venciste al jefe ");
+                            }
                         }
                         else{
-                            System.out.println("venciste al jefe ");
-                        }
-                    }
-                    else{
-                        while (jugador1.Alive() != false | DaddyYankee.Alive() != false) {
-                            DaddyYankee.takeDamage(jugador1.atack());
-                            if(DaddyYankee.Alive() == false){
-                                break;
+                            while (jugador1.Alive() != false | DaddyYankee.Alive() != false) {
+                                DaddyYankee.takeDamage(jugador1.atack());
+                                if(DaddyYankee.Alive() == false){
+                                    break;
+                                }
+                                jugador1.takeDamage(DaddyYankee.atack());
+                                if (jugador1.Alive() == false) {
+                                    break;
+                                }
                             }
-                            jugador1.takeDamage(DaddyYankee.atack());
-                            if (jugador1.Alive() == false) {
-                                break;
+                            if (jugador1.Alive() == false){
+                                System.out.println("el jefe te gano");
+                            }
+                            else{
+                                System.out.println("venciste al jefe");
                             }
                         }
-                        if (jugador1.Alive() == false){
-                            System.out.println("el jefe te gano");
-                        }
-                        else{
-                            System.out.println("venciste al jefe");
-                        }
-                    }
                     break;
-                    }
+                }
             }
         }    
         while (!readKeyBoard.equals("3"));

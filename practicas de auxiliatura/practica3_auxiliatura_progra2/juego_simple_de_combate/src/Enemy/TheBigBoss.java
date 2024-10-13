@@ -14,7 +14,7 @@ public class TheBigBoss extends Enemy{
         Multipliciti = multipliciti;
     }
     public void ThreatheningPhrase(){
-        System.out.println("hoy sera tu fin muaajajajajaja");
+        System.out.println("tenemo algo pendiente, tu me debe algo y lo sabe ");
     }
     public Double criticalAtack(){
         Random Damage = new Random();
